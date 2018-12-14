@@ -1,6 +1,6 @@
 
 // calling our getRandomInt function (DEF: BOTTOM OF PAGE) to randomly generate the target number our player must reach to win
-var targetNumber = getRandomInt(19-121) //max is 121 because max in getRandomInt is exclusive
+var targetNumber = getRandomInt(19 , 121) //max is 121 because max in getRandomInt is exclusive
 console.log(targetNumber , "targetNumber") //FOR TESTING
 // using jQuery to display our randomly generated target number on the DOM
 $("#numberToGuess").text(targetNumber); // NAN??? TESTING STILL
@@ -56,7 +56,7 @@ $("#numberToGuess").text(targetNumber); // NAN??? TESTING STILL
   });
 
 //   Declaring our function to generate a random integer between two values. 
-  function getRandomInt(min, max) {
+  function getRandomInt(min , max) {
     min = Math.ceil(min);
     max = Math.floor(max); 
     return Math.floor(Math.random() * (max - min)) + min; //getRandomInt is exclusive on the upper bound
