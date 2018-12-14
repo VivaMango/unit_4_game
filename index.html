@@ -6,32 +6,42 @@
     <title>Unit_4_Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Moved our JQuery StackPath CDN link to the top of our HTML for best loading practices -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
     <!-- Bootstrap CDN link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Our Stylesheet -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 
-    <!-- Link to our JavaScript -->
-    <script src="assets/javascript/game.js"></script>
-
-    <!-- JQuery StackPath CDN -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <!-- Bootstrap Jumbotron acting as our game header. -->
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 class="display-4">Welcome to the Unit_4_Game</h1>
-              <p class="lead">This game is currently under construction, please check back later</p>
-              <!-- Empty Div to Test with JQuery -->
-              <div id="dynamicFill"></div>
+                <h1 class="display-4">Welcome to the Unit_4_Game</h1>
+                <p class="lead">This game is currently under construction, please check back later</p>
             </div>
-          </div>
-    
+        </div>
+
+    <!-- Bootstrap Container for Left & Right Game Displays -->
+        <div class=container>
+            <!-- Wrapping row for Bootstrap columns -->
+            <div class=row>
+                <!-- Left Bootstrap Game Display COUNTER HOLDER -->
+                <div class="col-lg-6">Number to Guess: <span id=numberToGuess></span></div>
+                <!-- Right Bootstrap Game Display IMAGE HOLDER -->
+                <div id="clickImages" class="col-lg-6"></div>
+            </div>
+        </div>
     
     
     </body>
+
+    <!-- Moved our relative JavaScript file link to the bottom of our HTML for best loading practices -->
+    <script src="assets/javascript/game.js"></script>
+    
 </html>
 

@@ -1,0 +1,8 @@
+
+/* css class added by jQuery to each of our images */
+.clickImageClass {
+    border-style: solid; /* for testing */
+    border-width: 2px; /* for testing */
+    border-color: lime; /* lime for testing */
+    width: 10%; /* button sizing makes height scale relatively to width */
+}
