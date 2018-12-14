@@ -56,7 +56,7 @@ $("#numberToGuess").text(targetNumber);
       winCounter++; //increments our winCounter variable
       console.log(winCounter , "winCounter"); //FOR TESTING
       //USE JQUERY TO MANIPULATE DOM WITH .TEXT to update the counter displayed to player
-      $("#lossCounterHolder").text(lossCounter);
+      $("#winCounterHolder").text(winCounter);
     }
     //or if our player exceeds target number
     else if (counter >= targetNumber) {
