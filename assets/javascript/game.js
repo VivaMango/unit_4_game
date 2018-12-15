@@ -13,7 +13,7 @@ console.log(targetNumber , "targetNumber"); //FOR TESTING
 $("#numberToGuess").text(targetNumber); 
 
 //Global counter variable to store our player's score
-    // var counter = 0;
+    var counter = 0; //THIS WAS COMMENTED OUT BY ACCIDENT FIXED OUR COUNTER RESET BETWEEN GAMES
 
   //creating a for loop to generate 4 images with random hidden values for our player to click
     for (var i = 0; i < 4; i++) { // i < 4 because we want to randomly generate 4 images with this loop for each game
@@ -52,20 +52,20 @@ $("#numberToGuess").text(targetNumber);
     //if our player correctly adds up to the target number
     if (counter === targetNumber) { 
       alert("You matched my number! Can you do it again?"); // alert them that they've won the game 
-      restartClickerGame(); //calling our restartClickerGame function (DEF BELOW) to restart the game
       winCounter++; //increments our winCounter variable
       console.log(winCounter , "winCounter"); //FOR TESTING
       //USE JQUERY TO MANIPULATE DOM WITH .TEXT to update the counter displayed to player
       $("#winCounterHolder").text(winCounter);
+      restartClickerGame(); //calling our restartClickerGame function (DEF BELOW) to restart the game
     }
     //or if our player exceeds target number
     else if (counter >= targetNumber) {
       alert("BUST!!! Please try again."); //alert them they've lost the game 
-      restartClickerGame(); //calling our restartClickerGame function (DEF BELOW) to restart the game
       lossCounter++; //increments our lossCounter variable
       console.log(lossCounter , "lossCounter"); //FOR TESTING
       //USE JQUERY TO MANIPULATE DOM WITH .TEXT to update the counter displayed to player
       $("#lossCounterHolder").text(lossCounter);
+      restartClickerGame(); //calling our restartClickerGame function (DEF BELOW) to restart the game
     }
 
   });
